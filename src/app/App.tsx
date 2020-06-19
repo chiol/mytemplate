@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/extensions */
 import React from "react";
-import { Switch, Route, RouteComponentProps } from "react-router-dom";
+import { Switch, Route, RouteComponentProps, Redirect } from "react-router-dom";
 import { MainPage, ErrorPage, LoginPage } from "pages";
 import { ThemeProvider } from "styled-components";
 import theme from "styles/theme";
@@ -37,7 +37,7 @@ const App = () => {
                             <ErrorPage type="500" {...props} />
                         )}
                     />
-
+                    <Redirect to="/login"/>
                 </Switch>
             </ThemeProvider>
         </MyDiv>
